@@ -22,16 +22,31 @@ and open the template in the editor.
         
         <input type="text" id="name" onchange="nomequiz()"/>
         
-        <p id="intro">  </p>
+        <p id="intro"> </p>
+        
+        <label> 
+        Di che segno sei?
+        </label>
+        <br/>
+        <input type="button" value="Lavinia">
+        <br/>
+        <input type="button" value="Forcellese">
+        <br/>
+        <input type="button" value="Forcellabella">
+        <br/>
+        <input type="button" value="Ma che segno e segno... quello che conta è l'ascendente">
         
         
     </body>
     
     <script type="text/JavaScript"> 
+        
+        var name="";
+        
         function nomequiz(){
             
-            var name=document.getElementById("name").value;
-            document.getElementById("intro").innerHTML= "Ciao " + name + ", se sei arrivato a questo questionario molto probabilmente ti starai chiedendo quale membro di quella simpatica combriccola della Dark Pola Gang ti rappresenti.";
+            name=document.getElementById("name").value;
+            document.getElementById("intro").innerHTML= "Ciao " + name + ", se sei arrivato a questo questionario molto probabilmente ti starai chiedendo quale membro di quella simpatica combriccola della Dark Pola Gang ti rappresenti.\n Iniziamo con le domande.";
             
         
         };
