@@ -51,15 +51,25 @@ and open the template in the editor.
             
             name=document.getElementById("name").value;
             document.getElementById("intro").innerHTML= "Ciao " + name + ", se sei arrivato a questo questionario molto probabilmente ti starai chiedendo quale membro di quella simpatica combriccola della Dark Pola Gang ti rappresenti.";
+            wait(3000);
             document.getElementById("intro2").style.display="block";
             
         };
         
         function showdom(id){
-        
+            
+            wait(3000);
             document.getElementById(id).style.display="block";
             
         };
+        
+        function wait(ms){
+   var start = new Date().getTime();
+   var end = start;
+   while(end < start + ms) {
+     end = new Date().getTime();
+  }
+};
     </script>
     
 </html>
