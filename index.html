@@ -20,7 +20,7 @@ and open the template in the editor.
         </label>
         <br/>
         
-        <input type="text" id="name" onchange="name()"/>
+        <input type="text" id="name" onchange="nomequiz()"/>
         
         <p id="intro">  </p>
         
@@ -28,7 +28,7 @@ and open the template in the editor.
     </body>
     
     <script type="text/JavaScript"> 
-        function name(){
+        function nomequiz(){
             
             var name=document.getElementById("name").value;
             document.getElementById("intro").innerHTML= "Ciao " + name + ", se sei arrivato a questo questionario molto probabilmente ti starai chiedendo quale membro di quella simpatica combriccola della Dark Pola Gang ti rappresenti.";
