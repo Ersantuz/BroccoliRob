@@ -20,7 +20,7 @@ and open the template in the editor.
         </label>
         <br/>
         
-        <input type="text" id="name" onchange="nomequiz()"/>
+        <input type="text" id="name" onchange="nomequiz(); showdom('dom1')"/>
         
         <p id="intro"> </p>
 
@@ -53,7 +53,6 @@ and open the template in the editor.
             document.getElementById("intro").innerHTML= "Ciao " + name + ", se sei arrivato a questo questionario molto probabilmente ti starai chiedendo quale membro di quella simpatica combriccola della Dark Pola Gang ti rappresenti.";
             wait(3000);
             document.getElementById("intro2").style.display="block";
-            showdom('dom1')
             
         };
         
