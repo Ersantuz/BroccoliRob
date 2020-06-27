@@ -20,10 +20,11 @@ and open the template in the editor.
         </label>
         <br/>
         
-        <input type="text" id="name" onchange="nomequiz()"/>
+        <input type="text" id="name" onchange="nomequiz(); showdom("dom1")"/>
         
         <p id="intro"> </p>
         
+        <div id="dom1" style="display:none;">
         <label> 
         Di che segno sei?
         </label>
@@ -35,7 +36,7 @@ and open the template in the editor.
         <input type="button" value="Forcellabella">
         <br/>
         <input type="button" value="Ma che segno e segno... quello che conta è l'ascendente">
-        
+        </div>
         
     </body>
     
@@ -47,8 +48,14 @@ and open the template in the editor.
             
             name=document.getElementById("name").value;
             document.getElementById("intro").innerHTML= "Ciao " + name + ", se sei arrivato a questo questionario molto probabilmente ti starai chiedendo quale membro di quella simpatica combriccola della Dark Pola Gang ti rappresenti.\n Iniziamo con le domande.";
-            
         
         };
+        
+        function showdom(id){
+        
+            document.getElementById(id).style.display="block";
+            
+        };
     </script>
+    
 </html>
