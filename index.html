@@ -23,6 +23,8 @@ and open the template in the editor.
         <input type="text" id="name" onchange="nomequiz(); showdom('dom1')"/>
         
         <p id="intro"> </p>
+        <br/>
+        <p id="intro2" style="display:none;"> Iniziamo con le domande. </p>
         
         <div id="dom1" style="display:none;">
         <label> 
@@ -48,8 +50,9 @@ and open the template in the editor.
         function nomequiz(){
             
             name=document.getElementById("name").value;
-            document.getElementById("intro").innerHTML= "Ciao " + name + ", se sei arrivato a questo questionario molto probabilmente ti starai chiedendo quale membro di quella simpatica combriccola della Dark Pola Gang ti rappresenti.\n Iniziamo con le domande.";
-        
+            document.getElementById("intro").innerHTML= "Ciao " + name + ", se sei arrivato a questo questionario molto probabilmente ti starai chiedendo quale membro di quella simpatica combriccola della Dark Pola Gang ti rappresenti.";
+            document.getElementById("intro2").style.display="block";
+            
         };
         
         function showdom(id){
