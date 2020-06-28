@@ -201,25 +201,39 @@ and open the template in the editor.
         function nomequiz(){
             
             name=document.getElementById("name").value;
+            document.getElementById("intro").style.display="none";
             document.getElementById("intro").innerHTML= "Ciao " + name + ", se sei arrivato a questo questionario molto probabilmente ti starai chiedendo quale membro di quella simpatica combriccola di studenti di economics ti rappresenti.";
+            unfade ("intro")
             document.getElementById("intro2").style.display="block";
             
         };
         
         function showdom(id){
             
-            wait(3000);
             document.getElementById(id).style.display="block";
             
         };
         
         function wait(ms){
-   var start = new Date().getTime();
-   var end = start;
-   while(end < start + ms) {
-     end = new Date().getTime();
-  }
-};
+           var start = new Date().getTime();
+           var end = start;
+           while(end < start + ms) {
+             end = new Date().getTime();
+          }
+        };
+ 
+        function unfade(element) {
+            var op = 0.1;  // initial opacity
+            element.style.display = 'block';
+            var timer = setInterval(function () {
+            if (op >= 1){
+                clearInterval(timer);
+            }
+            element.style.opacity = op;
+            element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+            op += op * 0.1;
+            }, 10);
+        };
     </script>
     
 </html>
