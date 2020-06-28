@@ -214,19 +214,21 @@ and open the template in the editor.
         </label>
         <br/>
             <br/>
-        <input type="button" style="background-color:transparent; border-color:transparent; cursor:pointer" onclick="addScore('Francesca')" value="> Prendi quattro pacchi di sigarette, inforchi le beats ed esci">
+        <input type="button" style="background-color:transparent; border-color:transparent; cursor:pointer" onclick="addScore('Francesca'); showdom('butt')" value="> Prendi quattro pacchi di sigarette, inforchi le beats ed esci">
         <br/>
-        <input type="button" style="background-color:transparent; border-color:transparent; cursor:pointer" onclick="addScore('Lavinia')" value="> Scegli l'uomo della serata dal catalogo stagionale dei maschioni ESN">
+        <input type="button" style="background-color:transparent; border-color:transparent; cursor:pointer" onclick="addScore('Lavinia'); showdom('butt')" value="> Scegli l'uomo della serata dal catalogo stagionale dei maschioni ESN">
         <br/>
-        <input type="button" style="background-color:transparent; border-color:transparent; cursor:pointer" onclick="addScore('Enrico')" value="> Occhiale da dò, scarpe leopà, e si esce">
+        <input type="button" style="background-color:transparent; border-color:transparent; cursor:pointer" onclick="addScore('Enrico'); showdom('butt')" value="> Occhiale da dò, scarpe leopà, e si esce">
         <br/>
-        <input type="button" style="background-color:transparent; border-color:transparent; cursor:pointer" onclick="addScore('Lollo')" value="> Guardi il meteo per scegliere le scarpe sbagliate da indossare">
+        <input type="button" style="background-color:transparent; border-color:transparent; cursor:pointer" onclick="addScore('Lollo'); showdom('butt')" value="> Guardi il meteo per scegliere le scarpe sbagliate da indossare">
         </div>
         
         <br/>
             <br/>
         
-        <input type="button" style="cursor:pointer" onclick="quizRes()" value="Scopri quale dei bomber ti rappresenta">
+        <input id="butt" type="button" style="display:none; cursor:pointer" onclick="quizRes()" value="Scopri quale dei bomber ti rappresenta">
+        
+        <p id="rispAsap"> </p>
         
     </body>
     
@@ -293,10 +295,41 @@ and open the template in the editor.
         
         function quizRes(){
             
-        Object.keys(name_score).forEach(function(key) {
-        console.log(key, name_score[key]);  
-         });
+            var maxValue = 0;
             
+            Object.keys(name_score).forEach(function(key) {
+                if (name_score[key]>maxValue) {
+                    
+                    maxValue = name_score[key];
+                                        
+                }
+            });
+            
+            var keyList = {};
+            Object.keys(name_score).forEach(function(key) {
+                
+                if (name_score[key]===maxValue) {
+                   keyList.push(key);                   
+                }
+            });
+            
+            var nomi="";
+            if (keyList.length === 1) {
+                
+                document.getDocumentById("rispAsap").innerHTML = "Complimenti " + name + ", sei " + key +"!";
+                
+            } else {
+                
+                for (var i=0; i<keyList.length; i++){
+                
+                    nomi += "Un pizzico di... " + keyList[i] + "<br/>"; 
+                    
+                }
+                    
+                document.getDocumentById("rispAsap").innerHTML = "Accidenti " + name + ", sei una chimera! <br/> <br/> " + nomi ;
+                
+            }
+       
         };
         
     </script>
