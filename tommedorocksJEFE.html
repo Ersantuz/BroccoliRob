@@ -12,9 +12,21 @@ and open the template in the editor.
     </head>
     <body>
         
-        <h3> <input type="button" onclick="document.getElementById('ciao').style.display = 'block';" style="background-color:transparent; border-color:transparent; cursor:pointer; font-size: 1.17em; font-weight: bold; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px" value="Quale"/> membro di Economics sei?</h3>
+        <h3> <input type="button" onclick="easteregg()" style="background-color:transparent; border-color:transparent; cursor:pointer; font-size: 1.17em; font-weight: bold; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px" value="Quale"/> membro di Economics sei?</h3>
         <br/>
-        <img id="ciao" src="https://imgur.com/a/dG1hB3I" style="display:none"> </img>
+        
+        <div id="ciao" style="display:none;">
+            <img id="econ" src="https://i.imgur.com/dJn900a.jpg"> </img>
+             <br/>
+            Questa è una foto di alcuni membri di Economics
+             <br/>
+                 <br/>
+                     <br/>
+            <img id="tomma" src="https://i.imgur.com/lMYr4m5.png"> </img>
+             <br/>
+            E questo è tomma
+             </div>
+
         <div id="megaquiz">
             <div id="dom0"> </div>
         <label> 
@@ -363,9 +375,16 @@ and open the template in the editor.
                 document.getElementById("rispAsap").innerHTML = "Accidenti " + name + ", sei una chimera! <br/> <br/> " + nomi + breakDown;
                 
             }
-          }
+          }  
         };
        
+        function easteregg(){
+            
+            document.getElementById("megaquiz").style.display="none";
+            document.getElementById("ciao").style.display="block";
+            
+        
+        };
         
     </script>
     
