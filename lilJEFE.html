@@ -256,11 +256,11 @@ and open the template in the editor.
         function showdom(id){
             var num = parseInt(id.substr(3)) - 1;
             var oldQ = "dom" + num;
-            var newQ = document.getElementById(oldQ).getElementsByTagName('input')
+            var newQ = document.getElementById(oldQ).getElementsByTagName('input');
             
             for (var i=0;i<newQ.length; i++) {
                 newQ[i].disabled = true;
-            });
+            }
             unfade (document.getElementById(id));
             
         };
