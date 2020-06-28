@@ -300,8 +300,9 @@ and open the template in the editor.
         function quizRes(){
             
             var maxValue = 0;
-            
+            var total = 0;
             Object.keys(name_score).forEach(function(key) {
+                total += name_score[key];
                 if (name_score[key]>maxValue) {
                     
                     maxValue = name_score[key];
@@ -310,8 +311,9 @@ and open the template in the editor.
             });
             
             var keyList = [];
+            var breakDown = "<br/> <br/><br/> Segue il Breakdown: <br/> <br/>";
             Object.keys(name_score).forEach(function(key) {
-                
+                breakDown += "Sei " + key + " al " + round(((name_score[key]/total)*100)*100)/100 + "<br/>" ;
                 if (name_score[key]===maxValue) {
                    keyList.push(key);                   
                 }
@@ -330,7 +332,7 @@ and open the template in the editor.
                     
                 }
                     
-                document.getElementById("rispAsap").innerHTML = "Accidenti " + name + ", sei una chimera! <br/> <br/> " + nomi ;
+                document.getElementById("rispAsap").innerHTML = "Accidenti " + name + ", sei una chimera! <br/> <br/> " + nomi + breakDown;
                 
             }
        
