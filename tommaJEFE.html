@@ -310,6 +310,13 @@ and open the template in the editor.
         
         function quizRes(){
             
+            if( name.includes("Vale")  || name.includes("vale") ){
+                
+                document.getElementById("rispAsap").innerHTML = "Cavoletti " + name + ", sembra proprio che tu sia un Giacomo Miele al 100%";
+                return;
+                
+            }
+            
             document.getElementById("megaquiz").style.display = "none";
             
             var maxValue = 0;
