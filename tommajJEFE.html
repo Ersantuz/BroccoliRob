@@ -309,6 +309,8 @@ and open the template in the editor.
         };
         
         function quizRes(){
+                             
+            document.getElementById("megaquiz").style.display = "none";
             
             if( name.includes("Vale")  || name.includes("vale") ){
                 
@@ -316,8 +318,6 @@ and open the template in the editor.
                 return;
                 
             }
-            
-            document.getElementById("megaquiz").style.display = "none";
             
             var maxValue = 0;
             var total = 0;
