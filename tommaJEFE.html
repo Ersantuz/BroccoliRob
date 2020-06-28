@@ -300,7 +300,7 @@ and open the template in the editor.
         
         function quizRes(){
             
-            fade(document.getElementById("megaquiz"));
+            document.getElementById("megaquiz").style.display = "none";
             
             var maxValue = 0;
             var total = 0;
@@ -340,19 +340,7 @@ and open the template in the editor.
             }
        
         };
-        
-        function fade(element) {
-           var op = 1;  // initial opacity
-           var timer = setInterval(function () {
-               if (op <= 0.1){
-                    clearInterval(timer);
-                    element.style.display = 'none';
-                }
-                element.style.opacity = op;
-                element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-                op -= op * 0.1;
-            }, 10);
-         };
+       
         
     </script>
     
