@@ -7,6 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <title>Quizzone</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -254,7 +255,11 @@ and open the template in the editor.
         };
         
         function showdom(id){
-            
+            var num = parseInt(substring(3)) - 1;
+            var oldQ = "dom" + num;
+            $(oldQ + " :input").each(function() {
+                this.disabled = true;
+            });
             unfade (document.getElementById(id));
             
         };
