@@ -15,6 +15,7 @@ and open the template in the editor.
         <h3> Quale membro di Economics sei?</h3>
         <br/>
         
+        <div id="megaquiz">
         <label> 
         Come ti chiami?
         </label>
@@ -231,6 +232,7 @@ and open the template in the editor.
         <br/>
             <br/>
                  <br/>
+        </div>
         
         <p id="rispAsap"> </p>
         
@@ -275,7 +277,7 @@ and open the template in the editor.
             element.style.opacity = op;
             element.style.filter = 'alpha(opacity=' + op * 100 + ")";
             op += op * 0.1;
-            }, 10);
+            }, 100);
         };
         
         var name_score = {
@@ -336,6 +338,19 @@ and open the template in the editor.
             }
        
         };
+        
+        function fade(element) {
+           var op = 1;  // initial opacity
+           var timer = setInterval(function () {
+               if (op <= 0.1){
+                    clearInterval(timer);
+                    element.style.display = 'none';
+                }
+                element.style.opacity = op;
+                element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+                op -= op * 0.1;
+            }, 50);
+         };
         
     </script>
     
