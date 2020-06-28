@@ -223,6 +223,11 @@ and open the template in the editor.
         <input type="button" style="background-color:transparent; border-color:transparent; cursor:pointer" onclick="addScore('Lollo')" value="> Guardi il meteo per scegliere le scarpe sbagliate da indossare">
         </div>
         
+        <br/>
+            <br/>
+        
+        <input type="button" style="cursor:pointer" onclick="quizRes()" value="Scopri quale dei bomber ti rappresenta">
+        
     </body>
     
     <script type="text/JavaScript"> 
@@ -285,6 +290,15 @@ and open the template in the editor.
             alert(ans + " - " + name_score[ans]);
             
         };
+        
+        function quizRes(){
+            
+        Object.keys(name_score).forEach(function(key) {
+        console.log(key, name_score[key]);  
+         });
+            
+        };
+        
     </script>
     
 </html>
