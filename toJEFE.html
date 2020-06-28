@@ -300,6 +300,8 @@ and open the template in the editor.
         
         function quizRes(){
             
+            fade(document.getElementById("megaquiz"));
+            
             var maxValue = 0;
             var total = 0;
             Object.keys(name_score).forEach(function(key) {
