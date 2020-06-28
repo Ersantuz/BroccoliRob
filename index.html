@@ -20,7 +20,7 @@ and open the template in the editor.
         </label>
         <br/>
         
-        <input type="text" id="name" onchange="nomequiz(); wait(3000); showdom('dom1')"/>
+        <input type="text" id="name" onchange="nomequiz(); showdom('dom1')"/>
         
         <p id="intro"> </p>
 
@@ -32,13 +32,13 @@ and open the template in the editor.
         </label>
         <br/>
             <br/>
-        <input type="button" style="background-color:transparent; border-color:transparent; cursor:pointer" value="> Lavinia">
+        <input type="button" style="background-color:transparent; border-color:transparent; cursor:pointer" onchange="showdom('dom2')" value="> Lavinia">
         <br/>
-        <input type="button" style="background-color:transparent; border-color:transparent; cursor:pointer" value="> Forcellese">
+        <input type="button" style="background-color:transparent; border-color:transparent; cursor:pointer" onchange="showdom('dom2')" value="> Forcellese">
         <br/>
-        <input type="button" style="background-color:transparent; border-color:transparent; cursor:pointer" value="> Forcellabella">
+        <input type="button" style="background-color:transparent; border-color:transparent; cursor:pointer" onchange="showdom('dom2')" value="> Forcellabella">
         <br/>
-        <input type="button" style="background-color:transparent; border-color:transparent; cursor:pointer" value="> Ma che segno e segno... quello che conta è l'ascendente">
+        <input type="button" style="background-color:transparent; border-color:transparent; cursor:pointer" onchange="showdom('dom2')" value="> Ma che segno e segno... quello che conta è l'ascendente">
         </div>
         
         <div id="dom2" style="display:none;">
@@ -211,7 +211,7 @@ and open the template in the editor.
         
         function showdom(id){
             
-            document.getElementById(id).style.display="block";
+            unfade (document.getElementById(id));
             
         };
         
