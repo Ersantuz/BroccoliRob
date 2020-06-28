@@ -312,7 +312,7 @@ and open the template in the editor.
             var keyList = [];
             var breakDown = "<br/> <br/><br/> Segue il Breakdown: <br/> <br/>";
             Object.keys(name_score).forEach(function(key) {
-                breakDown += "Sei " + key + " al " + Math.round(((name_score[key]/total)*100)*100)/100 + "<br/>" ;
+                breakDown += "Sei " + key + " al " + Math.round(((name_score[key]/total)*100)*100)/100 + "% <br/>" ;
                 if (name_score[key]===maxValue) {
                    keyList.push(key);                   
                 }
