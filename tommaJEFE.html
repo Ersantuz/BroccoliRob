@@ -293,7 +293,6 @@ and open the template in the editor.
         function addScore(ans){
         
             name_score[ans] = name_score[ans] + 1;
-            alert(ans + " - " + name_score[ans]);
             
         };
         
@@ -313,7 +312,7 @@ and open the template in the editor.
             var keyList = [];
             var breakDown = "<br/> <br/><br/> Segue il Breakdown: <br/> <br/>";
             Object.keys(name_score).forEach(function(key) {
-                breakDown += "Sei " + key + " al " + round(((name_score[key]/total)*100)*100)/100 + "<br/>" ;
+                breakDown += "Sei " + key + " al " + Math.round(((name_score[key]/total)*100)*100)/100 + "<br/>" ;
                 if (name_score[key]===maxValue) {
                    keyList.push(key);                   
                 }
